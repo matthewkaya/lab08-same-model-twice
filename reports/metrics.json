@@ -1,0 +1,45 @@
+{
+  "dataset": {
+    "rows": 6000,
+    "split_sizes": {
+      "train": 3600,
+      "validation": 1200,
+      "test": 1200
+    }
+  },
+  "baselines": {
+    "training_mean": {
+      "validation_mae": 9.951945304870605,
+      "test_mae": 9.848395347595215
+    },
+    "linear_regression": {
+      "validation_mae": 9.032176971435547,
+      "test_mae": 8.762954711914062
+    }
+  },
+  "selected_neural_network": {
+    "configuration": {
+      "name": "wider_hidden_layers",
+      "hidden_sizes": [
+        128,
+        64
+      ],
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 2026
+    },
+    "best_epoch": 100,
+    "validation_mae": 2.7874911244710288,
+    "test_mae": 2.6849214299519857
+  },
+  "selection_metric": "validation_mae",
+  "reproducibility": {
+    "seed": 2026,
+    "python_numpy_torch_seeded": true,
+    "dataloader_seed": 2026,
+    "training_loader_shuffled_only": true,
+    "torch_num_threads": 1,
+    "device": "cpu"
+  }
+}

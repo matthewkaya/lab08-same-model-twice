@@ -1,0 +1,4 @@
+name,hyperparameters,best_epoch,best_validation_mae,best_validation_mae_epoch,checkpoint_validation_mae,best_validation_loss,final_training_loss,final_validation_loss
+main,"{""batch_size"": 64, ""epochs"": 100, ""hidden_sizes"": [64, 32], ""learning_rate"": 0.001, ""seed"": 2026}",100,3.3752904383341473,100,3.3752904383341473,24.734790852864585,22.628736368815105,24.734790852864585
+low_learning_rate,"{""batch_size"": 64, ""epochs"": 100, ""hidden_sizes"": [64, 32], ""learning_rate"": 0.0001, ""seed"": 2026}",100,7.622981948852539,100,7.622981948852539,125.38816507975261,125.30048309326172,125.38816507975261
+wider_hidden_layers,"{""batch_size"": 64, ""epochs"": 100, ""hidden_sizes"": [128, 64], ""learning_rate"": 0.001, ""seed"": 2026}",100,2.7874911244710288,100,2.7874911244710288,16.218237940470377,13.047100173102486,16.218237940470377
