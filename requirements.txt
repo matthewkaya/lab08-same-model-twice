@@ -1,5 +1,6 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.15.0+cpu
+keras>=3.0
 numpy==2.5.4
 pandas==3.1.1
 scikit-learn==1.9.1
