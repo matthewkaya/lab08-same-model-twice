@@ -1,8 +1,8 @@
 """Keras equivalent of the PyTorch bike-rental regression network.
 
-Predictions copied between the two models are compared with
-``rtol=1e-5`` and ``atol=1e-5``. Keras defaults to the already-installed
-PyTorch backend unless ``KERAS_BACKEND`` is set explicitly before import.
+Set ``KERAS_BACKEND`` before importing this module to choose a backend; it
+defaults to TensorFlow. Predictions copied between models are compared with
+``rtol=1e-5`` and ``atol=1e-5``.
 """
 
 from __future__ import annotations
@@ -10,9 +10,9 @@ from __future__ import annotations
 import os
 from collections.abc import Sequence
 
-# The project already depends on PyTorch. Keras 3 can use it as a backend,
-# which avoids requiring a second numerical runtime for this model port.
-os.environ.setdefault("KERAS_BACKEND", "torch")
+# Keras reads this setting at import time. Callers can override it in the
+# environment before starting Python, for example ``KERAS_BACKEND=jax``.
+os.environ.setdefault("KERAS_BACKEND", "tensorflow")
 
 import keras  # noqa: E402
 import numpy as np  # noqa: E402

@@ -6,6 +6,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
+reports/best_keras_model.keras
 
 # Local editor and operating-system files
 .DS_Store
